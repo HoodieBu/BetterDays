@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetterDays</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="Images/DefaultHeaderImage.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html">Online Counseling</a>
+    <a href="/CommunityPage/community.html">Support Community</a>
+    <a href="/BlogPage/blog.html">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+
+<!-- Preload alternate logo -->
+<link rel="preload" href="Images/HeaderImage2.png" as="image">
+
+  <!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Your Mental Health Matters</h1>
+      <p>BetterDays helps you find support, learn about mental wellness, and connect with a caring community.</p>
+      <button class="hero-btn">Get Support</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="/Images/mental-health-illustration.svg" alt="Mental Health Illustration">
+    </div>
+  </div>
+
+  <!-- Bottom wave to transition into the next section -->
+  <svg class="hero-wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#ffffff" d="M0,224 C480,280 960,120 1440,240 L1440,320 L0,320Z"></path>
+  </svg>
+</section>
+
+<section class="spotlight-section" id="disorders">
+  <!-- Floating particle canvas -->
+  <canvas id="particles-bg"></canvas>
+
+  <div class="spotlight-header">
+    <h2>Bringing Awareness Into the Light</h2>
+    <p>Learn more about the mental disorders people suffer from and how to help.</p>
+  </div>
+
+  <div class="spotlight-text">
+    <p class="disorder">💭 Anxiety Disorders</p>
+    <p class="disorder">🌧️ Depression</p>
+    <p class="disorder">⚡ PTSD</p>
+    <p class="disorder">🌙 Bipolar Disorder</p>
+    <p class="disorder">🌀 OCD</p>
+    <p class="disorder">🥀 Eating Disorders</p>
+
+    <button class="learn-more-btn" onclick="scrollToResources()">Learn More</button>
+  </div>
+</section>
+
+<section id="impact">
+  <!-- Depression -->
+  <div class="impact-section primary">
+    <div class="impact-content">
+      <div class="impact-text fade-in-left">
+        <h2>Depression in Adults</h2>
+        <p>More than <strong>1 in 5 adults</strong> in the United States experience depression each year.  
+        It’s one of the most common — but also one of the most treatable — mental health conditions.</p>
+      </div>
+      <div class="impact-chart fade-in-right">
+        <div class="chart-wrapper">
+          <canvas id="chartDepression"></canvas>
+          <span class="chart-label" id="depressionLabel">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suicide -->
+  <div class="impact-section secondary">
+    <div class="impact-content reverse">
+      <div class="impact-text fade-in-right">
+        <h2>Suicide in America</h2>
+        <p>In 2023, over <strong>49,000 people</strong> in the U.S. died by suicide —  
+        an average of one person every eleven minutes. Every number represents a life that could have been saved.</p>
+      </div>
+      <div class="impact-chart fade-in-left">
+        <div class="chart-wrapper">
+          <canvas id="chartSuicide"></canvas>
+          <span class="chart-label" id="suicideLabel">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="impact-cta">
+    <p class="fade-in-up">Don’t let that become you. Reach out.</p>
+    <button class="cta-btn fade-in-up" onclick="scrollToResources()">Find Support →</button>
+  </div>
+</section>
+
+<section id="counseling" class="counseling-section">
+  <div class="counseling-content">
+    <div class="counseling-text fade-in-left">
+      <h2>Online Counseling</h2>
+      <p>Talk to a licensed counselor from wherever you are — privately, safely, and on your own time.  
+      Whether you’re dealing with stress, anxiety, or just need someone to listen, help is only a message away.</p>
+      <button class="chat-cta">Connect with a Counselor →</button>
+    </div>
+
+    <div class="chat-thread fade-in-right">
+      <div class="message user">Hey... I’ve been feeling really anxious lately.</div>
+      <div class="typing counselor"><span></span><span></span><span></span></div>
+      <div class="message counselor">That’s okay — you’re taking the right step by reaching out.</div>
+
+      <div class="message user">It’s just hard to talk about sometimes.</div>
+      <div class="typing counselor"><span></span><span></span><span></span></div>
+      <div class="message counselor">You don’t have to go through it alone. I’m here to listen.</div>
+
+      <div class="message user">How do I start?</div>
+      <div class="typing counselor"><span></span><span></span><span></span></div>
+      <div class="message counselor highlight">We can begin right now — at your pace, in your space.</div>
+    </div>
+  </div>
+</section>
+
+<section class="grow-section" id="grow">
+  <div class="grow-container">
+    <div class="grow-text">
+      <h2>
+        <span>Together</span>
+        <span>We</span>
+        <span>Grow</span>
+      </h2>
+      <p>When one person takes a step forward, we all move with them. 
+         Growth happens through compassion, understanding, and connection.</p>
+      <button class="grow-btn">Join the Community →</button>
+    </div>
+
+    <div class="grow-image">
+      <div class="glow-bg"></div>
+      <img src="/Images/SupportCommunity.svg" alt="Growing Together Illustration">
+    </div>
+  </div>
+</section>
+
+<section class="letters-section" id="blog">
+  <div class="letters-header">
+    <h2>Letters from the Heart</h2>
+    <p>Words shared from those who’ve found their way through the dark.</p>
+  </div>
+
+  <div class="letters-row">
+    <div class="letter">
+      <p class="typed-text" data-text='"Some days feel impossible, but talking to someone changed everything."'></p>
+      <span>– Anonymous</span>
+    </div>
+
+    <div class="letter">
+      <p class="typed-text" data-text='"Healing isn’t a straight line — and that’s okay. Every step counts."'></p>
+      <span>– Mia, 27</span>
+    </div>
+
+    <div class="letter">
+      <p class="typed-text" data-text='"You are not your thoughts. You are the strength behind them."'></p>
+      <span>– Jordan</span>
+    </div>
+  </div>
+
+  <button class="letters-btn">Read Full Stories →</button>
+</section>
+
+<section class="echo-timeline" id="echo">
+  <h2 class="echo-title">Testimonials from Users</h2>
+  <div class="echo-words">
+    <span class="echo-word">Lost</span>
+    <span class="echo-word">Reached Out</span>
+    <span class="echo-word">Healing</span>
+    <span class="echo-word">Hope</span>
+    <span class="echo-word">Better Days</span>
+  </div>
+  <p class="echo-subtext">Every story creates an echo of strength and understanding.</p>
+  <button class="echo-btn" onclick="openTestimonials()">Read Their Stories →</button>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <!-- Top wave -->
+  <div class="footer-top-wave">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#ffffff" fill-opacity="1" 
+        d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,144C840,128,960,128,1080,149.3C1200,171,1320,213,1380,234.7L1440,256L1440,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+
+  <div class="footer-content">
+    <p class="footer-quote">
+      “Every ending is a chance to begin again. Take care of yourself — Better Days are ahead.”
+    </p>
+
+    <!-- Divider line -->
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <!-- Left -->
+      <div class="footer-left">
+        <img src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+        <h2 class="shimmer-text">BetterDays</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="footer-center">
+        <p>© 2025 BetterDays. All Rights Reserved.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-right">
+        <h4>Need Help Now?</h4>
+        <button class="footer-help-btn" onclick="scrollToResources()">Get Support</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="index.js"></script>
+</body>
+</html>
