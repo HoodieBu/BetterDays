@@ -5,10 +5,10 @@ window.addEventListener("scroll", () => {
 
   if (window.scrollY > 60) {
     header.classList.add("scrolled");
-    logo.setAttribute("src", "/Images/HeaderImage2.png");
+    logo.setAttribute("src", "Images/HeaderImage2.png");
   } else {
     header.classList.remove("scrolled");
-    logo.setAttribute("src", "/Images/DefaultHeaderImage.png");
+    logo.setAttribute("src", "Images/DefaultHeaderImage.png");
   }
 });
 
