@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetterDays | Online Counseling</title>
+
+  <link rel="stylesheet" href="/OnlineCounselingPage/online-counseling.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+</head>
+<body>
+
+<header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html" class="active">Online Counseling</a>
+    <a href="/CommunityPage/community.html">Support Community</a>
+    <a href="/BlogPage/blog.html">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="pill">
+          <span class="dot"></span>
+          Private • Supportive • Online
+        </div>
+        <h1>Online Counseling<br><span class="accent">that fits your life</span></h1>
+        <p>
+          Choose a counselor, pick a time, and book in under a minute.
+          If you need immediate help, visit the <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a> page.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn primary" onclick="document.querySelector('#scheduler').scrollIntoView({behavior:'smooth'})">
+            Schedule an Appointment
+          </button>
+          <button class="btn ghost" onclick="document.querySelector('#how').scrollIntoView({behavior:'smooth'})">
+            How it works
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>24/7</h3>
+            <span>Booking access</span>
+          </div>
+          <div class="stat">
+            <h3>15–60</h3>
+            <span>Minute sessions</span>
+          </div>
+          <div class="stat">
+            <h3>Secure</h3>
+            <span>Private & respectful</span>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how">
+    <h2>How it works</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-icon">1</div>
+        <h3>Pick your support</h3>
+        <p>Choose a counselor and session type that matches your comfort level.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">2</div>
+        <h3>Choose a time</h3>
+        <p>Select a day and an available time slot. We’ll confirm instantly.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-icon">3</div>
+        <h3>Show up & breathe</h3>
+        <p>Join from your phone or laptop. You’re not alone in this.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULER -->
+  <section id="scheduler" class="scheduler">
+    <div class="scheduler-head">
+      <h2>Book an online appointment</h2>
+      <p class="sub">This scheduler is a demo. It saves bookings in your browser and prevents double-booking.</p>
+    </div>
+
+    <div class="scheduler-shell">
+      <!-- LEFT: Steps + form -->
+      <div class="steps">
+        <div class="stepper" aria-label="Booking steps">
+          <div class="step active" data-step="1">
+            <div class="bubble">1</div>
+            <div class="meta">
+              <div class="label">Counselor</div>
+              <div class="hint" id="hint1">Choose who you’d like to meet</div>
+            </div>
+          </div>
+          <div class="step" data-step="2">
+            <div class="bubble">2</div>
+            <div class="meta">
+              <div class="label">Date & Time</div>
+              <div class="hint" id="hint2">Pick a day and timeslot</div>
+            </div>
+          </div>
+          <div class="step" data-step="3">
+            <div class="bubble">3</div>
+            <div class="meta">
+              <div class="label">Your Details</div>
+              <div class="hint" id="hint3">Name + contact info</div>
+            </div>
+          </div>
+          <div class="step" data-step="4">
+            <div class="bubble">4</div>
+            <div class="meta">
+              <div class="label">Confirm</div>
+              <div class="hint" id="hint4">Review and finish</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP PANELS -->
+        <div class="panel-wrap">
+          <!-- Step 1 -->
+          <div class="panel active" data-panel="1">
+            <div class="panel-title">
+              <h3>Choose a counselor</h3>
+              <span class="tiny">You can change this later</span>
+            </div>
+
+            <div class="field">
+              <label for="counselor">Counselor</label>
+              <select id="counselor">
+                <option value="" selected disabled>Select one…</option>
+                <option value="Jordan Lee">Jordan Lee — Anxiety & Stress</option>
+                <option value="Avery Chen">Avery Chen — Depression & Mood</option>
+                <option value="Sam Rivera">Sam Rivera — Relationships & Identity</option>
+                <option value="Taylor Brooks">Taylor Brooks — School & Motivation</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="sessionType">Session type</label>
+              <div class="segmented" role="tablist" aria-label="Session type">
+                <button class="seg active" data-type="Video" type="button">Video</button>
+                <button class="seg" data-type="Chat" type="button">Chat</button>
+                <button class="seg" data-type="Phone" type="button">Phone</button>
+              </div>
+              <input type="hidden" id="sessionType" value="Video">
+            </div>
+
+            <div class="field two">
+              <div>
+                <label for="duration">Duration</label>
+                <select id="duration">
+                  <option value="30">30 minutes</option>
+                  <option value="45">45 minutes</option>
+                  <option value="60">60 minutes</option>
+                </select>
+              </div>
+              <div>
+                <label for="timezone">Timezone</label>
+                <input id="timezone" type="text" readonly>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button class="btn primary" id="toStep2" type="button">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="panel" data-panel="2">
+            <div class="panel-title">
+              <h3>Select date & time</h3>
+              <span class="tiny">Times update based on counselor + duration</span>
+            </div>
+
+            <div class="calendar-shell">
+              <div class="cal-top">
+                <button class="icon-btn" id="prevMonth" type="button" aria-label="Previous month">‹</button>
+                <div class="cal-title" id="calTitle">Month Year</div>
+                <button class="icon-btn" id="nextMonth" type="button" aria-label="Next month">›</button>
+              </div>
+
+              <div class="cal-grid" id="calGrid" aria-label="Calendar"></div>
+            </div>
+
+            <div class="times">
+              <div class="times-top">
+                <div>
+                  <div class="times-title">Available times</div>
+                  <div class="times-sub" id="timesSub">Pick a date to see times.</div>
+                </div>
+                <button class="btn ghost small" id="clearTime" type="button">Clear</button>
+              </div>
+
+              <div class="time-grid" id="timeGrid"></div>
+            </div>
+
+            <div class="actions dual">
+              <button class="btn ghost" id="backTo1" type="button">Back</button>
+              <button class="btn primary" id="toStep3" type="button" disabled>Next</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="panel" data-panel="3">
+            <div class="panel-title">
+              <h3>Your details</h3>
+              <span class="tiny">We’ll use this to confirm your appointment</span>
+            </div>
+
+            <div class="field two">
+              <div>
+                <label for="fullName">Full name</label>
+                <input id="fullName" type="text" placeholder="Your name">
+              </div>
+              <div>
+                <label for="pronouns">Pronouns (optional)</label>
+                <input id="pronouns" type="text" placeholder="e.g., he/him, she/her, they/them">
+              </div>
+            </div>
+
+            <div class="field two">
+              <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com">
+              </div>
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" type="tel" placeholder="(555) 123-4567">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything you want them to know? (optional)</label>
+              <textarea id="notes" rows="4" placeholder="What you’re hoping to talk about, accessibility needs, etc."></textarea>
+              <div class="tiny muted">If you’re in danger or need urgent help, use the helplines page.</div>
+            </div>
+
+            <div class="actions dual">
+              <button class="btn ghost" id="backTo2" type="button">Back</button>
+              <button class="btn primary" id="toStep4" type="button">Next</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="panel" data-panel="4">
+            <div class="panel-title">
+              <h3>Confirm appointment</h3>
+              <span class="tiny">Review the details before booking</span>
+            </div>
+
+            <div class="summary" id="summaryBox"></div>
+
+            <div class="actions dual">
+              <button class="btn ghost" id="backTo3" type="button">Back</button>
+              <button class="btn primary" id="confirmBooking" type="button">Confirm Booking</button>
+            </div>
+
+            <div class="after" id="afterConfirm" hidden>
+              <div class="after-card">
+                <div class="check">✓</div>
+                <h3>Booked!</h3>
+                <p>Your appointment is saved in this browser. You can export it to your calendar, too.</p>
+                <div class="after-actions">
+                  <button class="btn ghost" id="downloadIcs" type="button">Download .ICS</button>
+                  <button class="btn primary" id="bookAnother" type="button">Book Another</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Live preview -->
+      <aside class="live">
+        <div class="live-card">
+          <div class="live-title">
+            <h3>Appointment preview</h3>
+            <span class="chip" id="liveChip">Not ready</span>
+          </div>
+
+          <div class="live-row">
+            <div class="live-k">Counselor</div>
+            <div class="live-v" id="liveCounselor">—</div>
+          </div>
+          <div class="live-row">
+            <div class="live-k">Type</div>
+            <div class="live-v" id="liveType">—</div>
+          </div>
+          <div class="live-row">
+            <div class="live-k">Duration</div>
+            <div class="live-v" id="liveDuration">—</div>
+          </div>
+          <div class="live-row">
+            <div class="live-k">When</div>
+            <div class="live-v" id="liveWhen">—</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="tiny muted">
+            Double-booking is blocked (per counselor + timeslot) using localStorage.
+          </div>
+        </div>
+
+        <div class="live-card mini-card">
+          <h3>Your bookings (this device)</h3>
+          <div class="bookings" id="bookingList"></div>
+          <button class="btn ghost small" id="clearBookings" type="button">Clear saved bookings</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div>© <span id="year"></span> BetterDays</div>
+  <div class="footer-links">
+    <a href="/resources.html">Get help now</a>
+    <span>•</span>
+    <a href="/community.html">Community</a>
+    <span>•</span>
+    <a href="/blog.html">Blog</a>
+  </div>
+</footer>
+
+<script src="/OnlineCounselingPage/online-counseling .js"></script>
+</body>
+</html>
