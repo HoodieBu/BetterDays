@@ -1,0 +1,148 @@
+/* -------------------------------------------------- */
+/* GLOBAL STYLE (matches BetterDays main UI)          */
+/* -------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f3f8ff;
+  color: #0f172a;
+}
+
+/* Fixed BetterDays Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 42px;
+  box-sizing: border-box;
+  z-index: 999;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 46px;
+  width: 46px;
+}
+
+.logo h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 26px;
+}
+
+nav a {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a:hover {
+  color: #1e3a8a;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #60a5fa;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.cta {
+  background: #1d4ed8;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background: #3b82f6;
+}
+
+/* -------------------------------------------------- */
+/* ARTICLE LAYOUT — EXACT LEFT POSITION               */
+/* -------------------------------------------------- */
+
+.content {
+  margin-top: 160px;   /* clears header */
+  margin-left: 40px;   /* LEFT SIDE OF PAGE */
+  margin-right: 40px;
+  max-width: 1200px;    /* readable width */
+  text-align: left;
+  padding: 0;
+}
+
+/* -------------------------------------------------- */
+/* TITLE SECTION                                      */
+/* -------------------------------------------------- */
+
+.info-box {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.disorder-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* -------------------------------------------------- */
+/* ARTICLE CONTENT                                     */
+/* -------------------------------------------------- */
+
+.article-content h2 {
+  font-size: 20px;
+  margin: 40px 0 16px;
+  color: #0f172a;
+}
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 16px;
+}
+
+.article-content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #374151;
+}
