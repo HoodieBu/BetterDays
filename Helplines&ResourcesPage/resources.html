@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetterDays | Helplines & Resources</title>
+  <link rel="stylesheet" href="/Helplines&ResourcesPage/resources.css">
+  <link rel="icon" type="image/x-icon" href="/Images/favicon.ico">
+</head>
+
+<body>
+
+<header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html" class="active">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html">Online Counseling</a>
+    <a href="/CommunityPage/community.html">Support Community</a>
+    <a href="/BlogPage/blog.html">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="pill">
+        <span class="dot"></span>
+        Support that adapts to you
+      </div>
+
+      <h1>What do you need right now?</h1>
+      <p class="sub">
+        Choose what feels closest. BetterDays will show a focused set of options no resource dump.
+      </p>
+
+      <!-- FLOW BAR -->
+      <div class="flow" role="region" aria-label="Conversation flow">
+        <div class="flowbar" role="list" aria-label="Support categories">
+          <button class="chip" data-target="crisis" role="listitem">
+            <span class="ico">🆘</span>
+            <span class="txt">
+              <strong>Crisis</strong>
+              <em>Immediate help</em>
+            </span>
+          </button>
+
+          <button class="chip" data-target="talk" role="listitem">
+            <span class="ico">💬</span>
+            <span class="txt">
+              <strong>Talk</strong>
+              <em>Confidential support</em>
+            </span>
+          </button>
+
+          <button class="chip" data-target="someone" role="listitem">
+            <span class="ico">🫶</span>
+            <span class="txt">
+              <strong>Someone else</strong>
+              <em>How to help</em>
+            </span>
+          </button>
+
+          <button class="chip" data-target="learn" role="listitem">
+            <span class="ico">📘</span>
+            <span class="txt">
+              <strong>Learn</strong>
+              <em>Trusted resources</em>
+            </span>
+          </button>
+        </div>
+
+        <!-- Spark line / indicator -->
+        <div class="sparktrack" aria-hidden="true">
+          <div class="spark"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results" aria-live="polite">
+    <div class="results-inner">
+      <div class="results-head">
+        <div>
+          <h2 id="resultsTitle">Pick a category above</h2>
+          <p id="resultsDesc">We’ll show the right info here.</p>
+        </div>
+
+        <button id="resetBtn" class="reset" type="button">Reset</button>
+      </div>
+
+      <!-- PANELS -->
+
+      <!-- CRISIS -->
+      <div class="panel" id="panel-crisis" hidden>
+        <div class="callout danger">
+          <div class="callout-top">
+            <span class="badge danger">Important</span>
+            <span class="muted">Immediate support</span>
+          </div>
+          <h3>If you are in immediate danger</h3>
+          <p>Call your local emergency number right now.</p>
+        </div>
+
+        <div class="focusline">
+          <div class="big">
+            <span class="label">US Suicide & Crisis Lifeline</span>
+            <span class="num">988</span>
+          </div>
+          <div class="big-sub">
+            Call or text <strong>988</strong>. Available <strong>24/7</strong>.
+          </div>
+        </div>
+
+        <div class="split">
+          <div class="softblock">
+            <h4>Try one small step (right now)</h4>
+            <ul>
+              <li>Move closer to other people (even one room closer).</li>
+              <li>Text a trusted person: “I need support right now.”</li>
+              <li>If speaking feels hard, start with: “I don’t know what to say, but I’m not okay.”</li>
+            </ul>
+          </div>
+
+          <div class="softblock">
+            <h4>What to expect</h4>
+            <p class="muted">
+              You won’t be judged. You don’t need the perfect words. You can share as little or as much as you want.
+            </p>
+            <div class="pillrow">
+              <span class="mini-pill">Confidential</span>
+              <span class="mini-pill">24/7</span>
+              <span class="mini-pill">No “right way” to start</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="fineprint">
+          BetterDays is not an emergency service. If you are in danger, contact emergency services.
+        </p>
+      </div>
+
+      <!-- TALK -->
+      <div class="panel" id="panel-talk" hidden>
+        <div class="grid2">
+          <div class="tile">
+            <div class="tile-top">
+              <span class="badge">Fast</span>
+              <h4>US Crisis Support</h4>
+            </div>
+            <p class="muted">Call or text:</p>
+            <div class="bigline"><span class="num">988</span><span class="subnum">24/7</span></div>
+            <p class="muted">Confidential support, anytime.</p>
+          </div>
+
+          <div class="tile">
+            <div class="tile-top">
+              <span class="badge soft">Youth</span>
+              <h4>Teen Line</h4>
+            </div>
+            <p class="muted">Text:</p>
+            <div class="bigline">
+              <span class="num small">TEEN</span>
+              <span class="subnum">to 839863</span>
+            </div>
+            <p class="muted">Availability varies.</p>
+          </div>
+
+          <div class="tile">
+            <div class="tile-top">
+              <span class="badge soft">LGBTQ+</span>
+              <h4>The Trevor Project</h4>
+            </div>
+            <p class="muted">Call:</p>
+            <div class="bigline"><span class="num small">1-866-488-7386</span></div>
+            <p class="muted">Crisis support for LGBTQ+ youth.</p>
+          </div>
+
+          <div class="tile highlight">
+            <div class="tile-top">
+              <span class="badge">Next step</span>
+              <h4>Talk to a professional</h4>
+            </div>
+            <p class="muted">If you’re looking for therapy, try a directory or your school counselor.</p>
+            <div class="actions">
+              <a class="btn" href="https://www.psychologytoday.com" target="_blank" rel="noopener">Find a therapist</a>
+              <a class="btn ghost" href="/OnlineCounselingPage/online-counseling.html">Online counseling</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOMEONE ELSE -->
+      <div class="panel" id="panel-someone" hidden>
+        <div class="timeline">
+          <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-body">
+              <h4>Start gentle</h4>
+              <p class="muted">Try: “I’m really glad you told me.”</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-body">
+              <h4>Reduce the loneliness</h4>
+              <p class="muted">Try: “You don’t have to go through this alone.”</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-dot"></div>
+            <div class="step-body">
+              <h4>Offer a next step</h4>
+              <p class="muted">Try: “Would you be open to calling/texting a helpline together?”</p>
+            </div>
+          </div>
+
+          <div class="step danger">
+            <div class="step-dot"></div>
+            <div class="step-body">
+              <h4>If you think they’re in danger</h4>
+              <p class="muted">
+                Stay with them if possible. In the US, call/text <strong>988</strong> or contact emergency services.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sharebox">
+          <h4>Send them one clear option</h4>
+          <p class="muted">Sometimes one link is better than a list.</p>
+          <div class="actions">
+            <a class="btn" href="https://www.nami.org" target="_blank" rel="noopener">NAMI resources</a>
+            <a class="btn ghost" href="/Helplines&ResourcesPage/resources.html">This page</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEARN -->
+      <div class="panel" id="panel-learn" hidden>
+        <div class="resource-list">
+          <a class="resource" href="https://www.nami.org" target="_blank" rel="noopener">
+            <div class="r-left">
+              <div class="r-ico">🌿</div>
+              <div>
+                <h4>NAMI</h4>
+                <p class="muted">Education, support, and advocacy.</p>
+              </div>
+            </div>
+            <span class="chev">→</span>
+          </a>
+
+          <a class="resource" href="https://www.mind.org.uk" target="_blank" rel="noopener">
+            <div class="r-left">
+              <div class="r-ico">🧠</div>
+              <div>
+                <h4>Mind</h4>
+                <p class="muted">Practical mental health guides (UK-based).</p>
+              </div>
+            </div>
+            <span class="chev">→</span>
+          </a>
+
+          <a class="resource" href="https://www.psychologytoday.com" target="_blank" rel="noopener">
+            <div class="r-left">
+              <div class="r-ico">🧭</div>
+              <div>
+                <h4>Psychology Today</h4>
+                <p class="muted">Therapist directory and articles.</p>
+              </div>
+            </div>
+            <span class="chev">→</span>
+          </a>
+        </div>
+
+      <div class="footer-note">
+        BetterDays does not replace professional medical care.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <div class="footer-content">
+    <p class="footer-quote">
+      “Every ending is a chance to begin again. Take care of yourself — Better Days are ahead.”
+    </p>
+
+    <!-- Divider line -->
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <!-- Left -->
+      <div class="footer-left">
+        <img src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+        <h2 class="shimmer-text">BetterDays</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="footer-center">
+        <p>© 2025 BetterDays. All Rights Reserved.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-right">
+        <h4>Need Help Now?</h4>
+        <button class="footer-help-btn" onclick="scrollToResources()">Get Support</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const chips = Array.from(document.querySelectorAll(".chip"));
+  const spark = document.querySelector(".spark");
+  const sparkTrack = document.querySelector(".sparktrack");
+  const resetBtn = document.getElementById("resetBtn");
+
+  const title = document.getElementById("resultsTitle");
+  const desc  = document.getElementById("resultsDesc");
+
+  const panels = {
+    crisis:  document.getElementById("panel-crisis"),
+    talk:    document.getElementById("panel-talk"),
+    someone: document.getElementById("panel-someone"),
+    learn:   document.getElementById("panel-learn"),
+  };
+
+  const copy = {
+    crisis:  { t: "Immediate help options", d: "Fast support and safe next steps." },
+    talk:    { t: "Talk to someone", d: "Confidential support and professional options." },
+    someone: { t: "Helping someone else", d: "Simple words, clear steps, and support." },
+    learn:   { t: "Learn & trusted resources", d: "Reliable guides and directories." }
+  };
+
+
+  function hideAllPanels() {
+    Object.values(panels).forEach(p => {
+      p.hidden = true;
+      p.classList.remove("show");
+    });
+  }
+
+  function setActiveChip(key) {
+    chips.forEach(c => c.classList.toggle("active", c.dataset.target === key));
+  }
+
+  function moveSparkToChip(chipEl) {
+    if (!chipEl) return;
+
+    const barRect = sparkTrack.getBoundingClientRect();
+    const chipRect = chipEl.getBoundingClientRect();
+
+    // center spark under chip
+    const chipCenter = (chipRect.left + chipRect.right) / 2;
+    const left = chipCenter - barRect.left;
+
+    // spark width relative to chip size (clamped)
+    const w = Math.max(42, Math.min(80, chipRect.width * 0.33));
+
+    spark.style.width = w + "px";
+    spark.style.transform = `translateX(${left - w/2}px)`;
+    spark.classList.add("on");
+  }
+
+  function showPanel(key) {
+    hideAllPanels();
+
+    const panel = panels[key];
+    if (!panel) return;
+
+    title.textContent = copy[key].t;
+    desc.textContent  = copy[key].d;
+
+    panel.hidden = false;
+    requestAnimationFrame(() => panel.classList.add("show"));
+
+    const activeChip = chips.find(c => c.dataset.target === key);
+    setActiveChip(key);
+    moveSparkToChip(activeChip);
+
+    document.querySelector(".results").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => showPanel(chip.dataset.target));
+  });
+
+  resetBtn.addEventListener("click", () => {
+    hideAllPanels();
+    chips.forEach(c => c.classList.remove("active"));
+
+    title.textContent = "Pick a category above";
+    desc.textContent  = "We’ll show the right info here.";
+
+    spark.classList.remove("on");
+    spark.style.transform = "translateX(0)";
+    spark.style.width = "0px";
+
+    document.querySelector(".hero").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  // If you want a default open state, uncomment:
+  // showPanel("talk");
+</script>
+
+</body>
+</html>
