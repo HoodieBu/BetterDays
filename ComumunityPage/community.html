@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BetterDays | Support Community</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="/CommunityPage/community.css" />
+</head>
+<body>
+<header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html">Online Counseling</a>
+    <a href="/CommunityPage/community.html" class="active">Support Community</a>
+    <a href="/BlogPage/blog.html">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Support Community</h1>
+      <p>
+        A calm space to talk, listen, and feel understood without creating an account.
+        Keep it kind. Keep it safe. You can join any room at any time.
+      </p>
+
+      <div class="values">
+        <div class="value"><div class="badge">💙</div><div><b>Kindness first</b><span>No judgment. No pressure. Just support.</span></div></div>
+        <div class="value"><div class="badge">🫧</div><div><b>Anonymous by default</b><span>No signups. Your name is auto-generated.</span></div></div>
+        <div class="value"><div class="badge">🛡️</div><div><b>Safety matters</b><span>Harmful content isn’t allowed.</span></div></div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="id-pill">
+        <div class="dot"></div>
+        <div>
+          <div class="label" id="identityLabel">Anonymous</div>
+          <div class="sub" id="identitySub">Joining…</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main">
+    <!-- CHAT -->
+    <div class="chat-card">
+      <div class="chat-top">
+        <div class="rooms" id="roomChips">
+          <div class="chip active" data-room="daily-check-in">Daily Check-In</div>
+          <div class="chip" data-room="late-night">Late-Night</div>
+          <div class="chip" data-room="anxiety-stress">Anxiety & Stress</div>
+          <div class="chip" data-room="feeling-low">Feeling Low</div>
+        </div>
+
+        <div class="status" id="status">
+          <span class="pulse"></span>
+          Starting…
+        </div>
+      </div>
+
+      <div class="messages" id="messages"></div>
+
+      <div class="composer">
+        <textarea id="input" placeholder="Share what you’re feeling… (Enter to send, Shift+Enter for new line)"></textarea>
+        <button class="send" id="sendBtn" disabled>Send</button>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="side">
+      <h3>Community Guidelines</h3>
+      <p>These rooms are for support. If you’re unsure what to say, start with one sentence.</p>
+
+      <div class="rule"><div class="num">1</div><div><b>Be gentle</b><span>Talk to others like you would a friend.</span></div></div>
+      <div class="rule"><div class="num">2</div><div><b>No harmful content</b><span>No threats, self-harm encouragement, or targeted harassment.</span></div></div>
+      <div class="rule"><div class="num">3</div><div><b>Privacy matters</b><span>Don’t share personal addresses, phone numbers, or private info.</span></div></div>
+
+      <div class="btn-row">
+        <button class="btn primary" onclick="location.href='/Helplines&ResourcesPage/resources.html'">Resources</button>
+        <button class="btn ghost" id="clearLocal">Reset my name</button>
+      </div>
+
+      <div class="tiny">
+        If you’re in immediate danger, contact local emergency services. BetterDays is support-focused and not a crisis line.
+      </div>
+    </aside>
+  </section>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <div class="footer-content">
+    <p class="footer-quote">
+      “Every ending is a chance to begin again. Take care of yourself — Better Days are ahead.”
+    </p>
+
+    <!-- Divider line -->
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <!-- Left -->
+      <div class="footer-left">
+        <img src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+        <h2 class="shimmer-text">BetterDays</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="footer-center">
+        <p>© 2025 BetterDays. All Rights Reserved.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-right">
+        <h4>Need Help Now?</h4>
+        <button class="footer-help-btn" onclick="scrollToResources()">Get Support</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/CommunityPage/community.js"></script>
+</body>
+</html>
