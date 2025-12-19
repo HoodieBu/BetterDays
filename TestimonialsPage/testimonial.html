@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BetterDays | Testimonials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="/Images/favicon.ico">
+  <link rel="stylesheet" href="/TestimonialsPage/testimonial.css">
+</head>
+<body>
+
+  <header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html">Online Counseling</a>
+    <a href="/CommunityPage/community.html">Support Community</a>
+    <a href="/BlogPage/blog.html">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html" class="active">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+  
+<main class="wrap">
+
+<section class="hero hero-open">
+  <div class="hero-left">
+    <div class="pill">
+      <span class="dot"></span>
+      Testimonials from people who kept going
+    </div>
+
+    <h1>Real Stories. Real Strength.</h1>
+
+    <p>
+      These are testimonials from individuals who’ve overcome mental health challenges.
+      If you’re struggling, you’re not alone  and it can get better.
+    </p>
+
+    <div class="hero-actions">
+      <button class="btn primary" id="jumpToStories">
+        Read Real Stories
+        <span class="btn-shine" aria-hidden="true"></span>
+      </button>
+      <a class="btn ghost" href="/resources.html">Get help &amp; resources</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="controls" id="stories">
+  <div class="controls-left">
+    <h2>Testimonials</h2>
+    <p class="muted">Tap a story to read the full experience.</p>
+
+    <!-- SEARCH -->
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18Zm0-2a6 6 0 1 0-4.243-10.243A6 6 0 0 0 10 16Zm9.707 4.293-4.2-4.2 1.414-1.414 4.2 4.2-1.414 1.414Z"/>
+      </svg>
+      <input id="searchInput" type="text" placeholder="Search stories (e.g., anxiety, burnout)" />
+    </div>
+
+    <!-- TOPIC CHIPS -->
+    <div class="chips" id="chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="Anxiety">Anxiety</button>
+      <button class="chip" data-filter="Depression">Depression</button>
+      <button class="chip" data-filter="Burnout">Burnout</button>
+      <button class="chip" data-filter="Grief">Grief</button>
+      <button class="chip" data-filter="Confidence">Confidence</button>
+    </div>
+  </div>
+</section>
+
+
+  <section class="grid" id="storyGrid">
+
+    <article class="card" tabindex="0" data-tags="Anxiety Confidence" data-story="story1">
+      <div class="card-top">
+        <div class="avatar">A</div>
+        <div class="who">
+          <div class="name">Alex <span class="age">• 17</span></div>
+          <div class="subtitle">Learning to calm the storm</div>
+        </div>
+      </div>
+
+      <p class="quote">
+        “I didn’t think things could get better — but one small step changed everything.”
+      </p>
+
+      <div class="tagrow">
+        <span class="tag">Anxiety</span>
+        <span class="tag soft">Confidence</span>
+      </div>
+
+      <div class="readmore">
+        Read full story
+        <span class="arrow">→</span>
+      </div>
+    </article>
+
+    <article class="card" tabindex="0" data-tags="Depression" data-story="story2">
+      <div class="card-top">
+        <div class="avatar">J</div>
+        <div class="who">
+          <div class="name">Jordan</div>
+          <div class="subtitle">Asking for help</div>
+        </div>
+      </div>
+
+      <p class="quote">
+        “Asking for help felt terrifying, but it saved my life.”
+      </p>
+
+      <div class="tagrow">
+        <span class="tag">Depression</span>
+      </div>
+
+      <div class="readmore">
+        Read full story
+        <span class="arrow">→</span>
+      </div>
+    </article>
+
+    <article class="card" tabindex="0" data-tags="Burnout Grief" data-story="story3">
+      <div class="card-top">
+        <div class="avatar">M</div>
+        <div class="who">
+          <div class="name">Maya</div>
+          <div class="subtitle">Rest is healing</div>
+        </div>
+      </div>
+
+      <p class="quote">
+        “Healing wasn’t fast — but it was possible.”
+      </p>
+
+      <div class="tagrow">
+        <span class="tag">Burnout</span>
+        <span class="tag soft">Grief</span>
+      </div>
+
+      <div class="readmore">
+        Read full story
+        <span class="arrow">→</span>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="cta">
+    <div class="cta-inner">
+      <h3>If you’re having a hard day…</h3>
+      <p>
+        You deserve support. If you need help right now, visit Helplines & Resources.
+      </p>
+      <a class="btn primary" href="/Helplines&ResourcesPage/resources.html">Go to resources</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Modal -->
+<div class="modal" id="storyModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="1"></div>
+
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div>
+        <div class="modal-kicker" id="modalKicker">Testimonial</div>
+        <h3 class="modal-title" id="modalTitle">Story</h3>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn small ghost" id="copyStoryBtn">Copy story</button>
+        <button class="btn small primary" id="closeModalBtn">Exit</button>
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <div class="modal-tags" id="modalTags"></div>
+      <div class="story" id="storyText"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <div class="footer-content">
+    <p class="footer-quote">
+      “Every ending is a chance to begin again. Take care of yourself — Better Days are ahead.”
+    </p>
+
+    <!-- Divider line -->
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <!-- Left -->
+      <div class="footer-left">
+        <img src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+        <h2 class="shimmer-text">BetterDays</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="footer-center">
+        <p>© 2025 BetterDays. All Rights Reserved.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-right">
+        <h4>Need Help Now?</h4>
+        <button class="footer-help-btn" onclick="scrollToResources()">Get Support</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/TestimonialsPage/testimonial.js"></script>
+</body>
+</html>
