@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetterDays | Blog</title>
+
+  <link rel="stylesheet" href="/BlogPage/blog.css" />
+  <link rel="icon" href="/Images/favicon.ico" />
+</head>
+<body>
+
+<header id="mainHeader">
+  <div class="logo">
+    <img id="headerLogo" src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+    <h2>BetterDays</h2>
+  </div>
+
+  <nav>
+    <a href="/DisorderPage/disorder.html">Disorders</a>
+    <a href="/Helplines&ResourcesPage/resources.html">Helplines & Resources</a>
+    <a href="/OnlineCounselingPage/online-counseling.html">Online Counseling</a>
+    <a href="/CommunityPage/community.html">Support Community</a>
+    <a href="/BlogPage/blog.html" class="active">Blog</a>
+    <a href="/TestimonialsPage/testimonial.html">Testimonials</a>
+  </nav>
+
+  <button class="cta">Get Help</button>
+</header>
+
+ <!-- FEATURED (NO CONTAINER / NO SIDE VISUAL) -->
+<section class="featured">
+  <span class="pill">Featured • Informational</span>
+  <h1>Understanding Mental Health without the confusion</h1>
+  <p>
+    Short, supportive articles that explain real topics like anxiety, depression,
+    stress, coping skills, and self-care in a way that’s clear and not overwhelming.
+  </p>
+
+  <div class="featured-meta">
+    <span>Updated weekly</span>
+    <span>•</span>
+    <span>Safe, stigma-free language</span>
+    <span>•</span>
+    <span>No account needed</span>
+  </div>
+
+  <button class="primary-btn" id="openFeatured">Read Featured Article</button>
+</section>
+
+  <!-- CONTROLS -->
+  <section class="controls">
+    <div class="search">
+      <input id="searchInput" type="text" placeholder="Search topics (ex: anxiety, burnout, coping)..." />
+      <button id="clearSearch" title="Clear">✕</button>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="anxiety">Anxiety</button>
+      <button data-filter="depression">Depression</button>
+      <button data-filter="selfcare">Self-Care</button>
+      <button data-filter="school">School Stress</button>
+      <button data-filter="coping">Coping Skills</button>
+    </div>
+  </section>
+
+  <!-- QUICK TOOLS -->
+  <section class="quick-tools">
+    <h2>Quick Tools</h2>
+    <div class="tools-grid">
+      <button class="tool-card" data-tool="breathing">
+        <h3>60-Second Breathing</h3>
+        <p>Calm your body fast with a simple pattern.</p>
+      </button>
+      <button class="tool-card" data-tool="grounding">
+        <h3>5–4–3–2–1 Grounding</h3>
+        <p>Reconnect to the present moment.</p>
+      </button>
+      <button class="tool-card" data-tool="journal">
+        <h3>Journal Prompt</h3>
+        <p>One question to help you process.</p>
+      </button>
+    </div>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-grid" id="blogGrid">
+
+    <!-- CARD TEMPLATE (repeat) -->
+    <article class="blog-card" data-tags="anxiety coping" data-title="What Anxiety Really Feels Like">
+      <div class="topline">
+        <span class="tag anxiety">Anxiety</span>
+        <span class="readtime">4 min</span>
+      </div>
+      <h3>What Anxiety Really Feels Like</h3>
+      <p>
+        Anxiety isn’t just “worry.” Learn what happens in the brain and body,
+        why it spikes, and what helps.
+      </p>
+      <div class="card-meta">
+        <span>By BetterDays</span>
+        <span>•</span>
+        <span>Dec 2025</span>
+      </div>
+      <button class="link-btn open-article"
+        data-article="anxiety1">Read More →</button>
+    </article>
+
+    <article class="blog-card" data-tags="depression coping" data-title="Depression vs. Sadness">
+      <div class="topline">
+        <span class="tag depression">Depression</span>
+        <span class="readtime">5 min</span>
+      </div>
+      <h3>Depression vs. Sadness</h3>
+      <p>
+        Feeling sad is human  but depression is deeper. Here’s how to tell
+        the difference and when support matters.
+      </p>
+      <div class="card-meta">
+        <span>By BetterDays</span>
+        <span>•</span>
+        <span>Dec 2025</span>
+      </div>
+      <button class="link-btn open-article"
+        data-article="depression1">Read More →</button>
+    </article>
+
+    <article class="blog-card" data-tags="selfcare coping" data-title="Small Self-Care Habits That Actually Help">
+      <div class="topline">
+        <span class="tag selfcare">Self-Care</span>
+        <span class="readtime">3 min</span>
+      </div>
+      <h3>Small Self-Care Habits That Actually Help</h3>
+      <p>
+        Self-care isn’t always bubble baths. These small habits can make your day
+        feel lighter without taking tons of time.
+      </p>
+      <div class="card-meta">
+        <span>By BetterDays</span>
+        <span>•</span>
+        <span>Dec 2025</span>
+      </div>
+      <button class="link-btn open-article"
+        data-article="selfcare1">Read More →</button>
+    </article>
+
+    <article class="blog-card" data-tags="school coping anxiety" data-title="Managing Stress During the School Year">
+      <div class="topline">
+        <span class="tag school">School Stress</span>
+        <span class="readtime">6 min</span>
+      </div>
+      <h3>Managing Stress During the School Year</h3>
+      <p>
+        School pressure is real. Try simple strategies for workload, expectations,
+        and avoiding burnout.
+      </p>
+      <div class="card-meta">
+        <span>By BetterDays</span>
+        <span>•</span>
+        <span>Dec 2025</span>
+      </div>
+      <button class="link-btn open-article"
+        data-article="school1">Read More →</button>
+    </article>
+
+    <article class="blog-card" data-tags="coping selfcare" data-title="Coping Skills That Work in Real Life">
+      <div class="topline">
+        <span class="tag coping">Coping Skills</span>
+        <span class="readtime">4 min</span>
+      </div>
+      <h3>Coping Skills That Work in Real Life</h3>
+      <p>
+        Not the “perfect routine” kind the real ones you can do in a hallway,
+        in class, or at home.
+      </p>
+      <div class="card-meta">
+        <span>By BetterDays</span>
+        <span>•</span>
+        <span>Dec 2025</span>
+      </div>
+      <button class="link-btn open-article"
+        data-article="coping1">Read More →</button>
+    </article>
+
+  </section>
+
+</main>
+
+<!-- ARTICLE MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-content">
+      <div class="modal-head">
+        <span class="modal-tag" id="modalTag">Informational</span>
+        <span class="modal-read" id="modalRead">4 min</span>
+      </div>
+      <h2 id="modalTitle">Title</h2>
+      <p class="modal-sub" id="modalSub">Short subtitle</p>
+      <div class="modal-body" id="modalBody"></div>
+
+      <div class="modal-actions">
+        <button class="secondary-btn" id="copyLink">Copy Article Text</button>
+        <button class="primary-btn" id="closeBottom">Done</button>
+      </div>
+
+      <p class="disclaimer">
+        This blog is informational and supportive not a substitute for professional help.
+        If you feel unsafe, please use the Helplines & Resources page.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- TOOL MODAL -->
+<div class="modal" id="toolModal">
+  <div class="modal-card">
+    <button class="modal-close" id="toolClose" aria-label="Close">✕</button>
+    <div class="modal-content">
+      <div class="modal-head">
+        <span class="modal-tag">Quick Tool</span>
+        <span class="modal-read" id="toolTimer">—</span>
+      </div>
+      <h2 id="toolTitle">Tool</h2>
+      <p class="modal-sub" id="toolSub">Sub</p>
+      <div class="modal-body" id="toolBody"></div>
+
+      <div class="modal-actions">
+        <button class="secondary-btn" id="toolCopy">Copy</button>
+        <button class="primary-btn" id="toolDone">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+
+  <div class="footer-content">
+    <p class="footer-quote">
+      “Every ending is a chance to begin again. Take care of yourself — Better Days are ahead.”
+    </p>
+
+    <!-- Divider line -->
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <!-- Left -->
+      <div class="footer-left">
+        <img src="/Images/HeaderImage2.png" alt="BetterDays Logo">
+        <h2 class="shimmer-text">BetterDays</h2>
+      </div>
+
+      <!-- Center -->
+      <div class="footer-center">
+        <p>© 2025 BetterDays. All Rights Reserved.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="footer-right">
+        <h4>Need Help Now?</h4>
+        <button class="footer-help-btn" onclick="scrollToResources()">Get Support</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/BlogPage/blog.js"></script>
+</body>
+</html>
