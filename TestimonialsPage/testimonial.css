@@ -601,6 +601,7 @@ body{
   font-weight:700 !important;
   color: var(--text-dark) !important;
   letter-spacing:-0.3px !important;
+  text-decoration: none;
 }
 
 /* Nav layout (do NOT hide overflow or the underline gets cut) */
