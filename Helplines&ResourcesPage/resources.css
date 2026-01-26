@@ -747,12 +747,13 @@ body{
   height:46px !important;
   width:46px !important;
 }
-#mainHeader .logo h2{
+#mainHeader .logo a{
   margin:0 !important;
   font-size:1.4rem !important;
   font-weight:700 !important;
   color: var(--text-dark) !important;
   letter-spacing:-0.3px !important;
+  text-decoration:none;
 }
 
 /* Nav layout (do NOT hide overflow or the underline gets cut) */
